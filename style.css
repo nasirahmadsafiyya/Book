@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url('./photo.avif')no-repeat center center/cover;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+a{ 
+    text-decoration: none;
+    color: white;
+}
+
+h2{
+    color:#1919e0;
+    letter-spacing: 5px;
+    text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn, .btn-black{
+    background: green;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.btn-black{
+    background: black;
+}
+
+.button-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author span, .books span{
+    background: darkblue;
+    color: aqua;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px ;
+    padding: 10px;
+    /* height: 6rem; */
+    width: 15rem;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.author div{
+    margin: 0  2px;
+}
+
+.books span{
+    height: 7.5rem;
+    width: 16rem;
+}
+
+button div{
+    display: inline-block;
+}
+
+.author div .delete, .books div .delete{
+    background: red;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 5px;
+    cursor: pointer;
+    margin-right: 80px;
+}
+
+.author div .edit, .books div .edit{
+    background: #0400ff;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.form{
+    width: 50%;
+}
+
+.form .form-group{
+    margin-bottom: 10px;
+}
+
+.form-group label{
+    display: block;
+    font-size: 1.5rem;
+    color: aqua;
+}
+
+.form-group input, .form-group select{
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-group select{
+    width: 103%;
+}

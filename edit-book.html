@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>edit-book</title>
+</head>
+<body onload="getAuthors(), getBook((new URLSearchParams(window.location.search)).get('id'))"> 
+    <form class="form" id="author-form">
+        <h2>Books</h2>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="form-group">
+            <label for="isbn">Isbn</label>
+            <input type="number" name="isbn" id="isbn">
+        </div>
+        <div class="form-group">
+            <label for="id">Author Name</label>
+            <select name="id" id="id">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="date">Publication Date</label>
+            <input type="date" name="date" id="publicationDate">
+        </div>
+        <div class="form-group">
+            <label for="date">Publisher</label>
+            <input type="text" name="name" id="publisher">
+        </div>
+            <div class="button-div">
+                <button type="button" class="btn-black"><a href="index.html">Back</a></button>
+                <button type="button" class="btn" onclick="editBook ((new URLSearchParams(window.location.search)).get('id'))">Submit</button>
+            </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>

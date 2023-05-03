@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Authors</h2>
+    <div class="author">
+    </div>
+    <div>
+        <button type="submit" class="btn"><a href="add-author.html">Add Author</a></button>
+    </div>
+    <h2>Books</h2>
+    <div class="books">
+    </div>
+    <div>
+     <button type="submit" class="btn"><a href="add-book.html">Add Book</a></button>
+    </div>
+    <script>
+        fetch('https://localhost:7246/api/Authors')
+        .then(response => response.json())
+        .then (data => {
+            data.forEach(author => {
+                const markup = `<span><div>Name : ${author.name} \n \t <br> Date of Birth : ${new Date(author.dateOfBirth).toLocaleDateString()}</div> \n \t <br><div><button type="submit" class="delete" onclick="deleteAuthor('${author.id}')">Delete</button><button type="submit" class="edit"><a href="edit-author.html?id=${author.id}">Edit</a></button></div></span`;
+                document.querySelector('.author').insertAdjacentHTML('beforeend', markup);
+            });
+        })        
+
+        fetch('https://localhost:7246/api/Books')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(book => {
+                const markup = `<span> Name : ${book.name}\n \t  <br> \n \t Author Name : ${book.author.name} \n \t <br> Isbn : ${book.isbn} \n \t <br> Publisher: ${book.publisher}<div><button class="delete" type="delete" onclick="deleteBook('${book.id}')">Delete</button><button class="edit" type="edit"><a href="edit-book.html?id=${book.id}">Edit</a></button></div></span>`;
+                document.querySelector('.books').insertAdjacentHTML('beforeend', markup);
+            })
+        })
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

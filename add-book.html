@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Add Books</title>
+</head>
+<body  onload="getAuthors()">
+    <form class="form" id="book-form">
+        <h2>Books</h2>
+        <div class="form-group">
+            <label for="name">Book Name</label>
+            <input type="text" name="name" id="book-name">
+        </div>
+        <div class="form-group">
+            <label for="id">author Name</label>
+            <select name="id" id="id">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="isbn">Isbn</label>
+            <input type="number" name="isbn" id="isbn">
+        </div>
+        <div class="form-group">
+            <label for="name">Publisher</label>
+            <input type="name" name="name" id="Publisher">
+        </div>
+        <div class="form-group">
+            <label for="date">publication Date</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <div class="button-div">
+            <button type="button" class="btn-black"><a href="index.html">Back</a></button>
+            <button type="button" class="btn" onclick="addBooks()"><a href="index.html">Submit</a></button>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
